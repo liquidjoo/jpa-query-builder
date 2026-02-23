@@ -49,7 +49,7 @@ class QueryExecutorTest {
 
     @BeforeAll
     static void setupDatabase() throws SQLException {
-        connection = DriverManager.getConnection("jdbc:h2:mem:test;DB_CLOSE_DELAY=-1", "sa", "");
+        connection = DriverManager.getConnection("jdbc:h2:mem:queryExecutorTest;DB_CLOSE_DELAY=-1", "sa", "");
 
         try (Statement stmt = connection.createStatement()) {
             stmt.execute(
